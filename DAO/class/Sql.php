@@ -9,15 +9,15 @@
             $this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
         }
         
-        public function select($rawQuery, $params = array()):array {
+        public function select($rawQuery, $params = array()) {
             
-            $stmt = $this->query($rawQuery, $params);
+            $stmt = $this->meuQuery($rawQuery, $params);
             
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
             
         }
         
-        public function query($rawQuery, $params = array()){
+        public function meuQuery($rawQuery, $params = array()){
             
             $stmt = $this->conn->prepare($rawQuery);
             
