@@ -33,10 +33,15 @@
 //    $aluno = new Usuario("aluno", "142536");
 //    $aluno->insert();
 //    echo $aluno
-$usuario = new Usuario();
+//    //alterar um ID
+//$usuario = new Usuario();
+//
+//$usuario->loadById(7);
+//$usuario->update("professor","15656582651");
+//echo $usuario;
 
-$usuario->loadById(7);
-$usuario->update("professor","15656582651");
-echo $usuario;
-
+    $usuario =new Usuario();
+    $usuario ->loadById(8);
+    $usuario ->delete();
+    echo $usuario;
 ?>
